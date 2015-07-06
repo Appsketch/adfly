@@ -1,6 +1,6 @@
 {
     "name": "m44rt3np44uw/adfly",
-    "description": "An Adfly wrapper for Laravel 5",
+    "description": "An Adfly wrapper for Laravel 5 and 5.1.",
     "keywords": ["laravel", "adfly", "shortener"],
     "license": "MIT",
     "authors": [
