@@ -58,7 +58,7 @@ Route::get('/adfly', function()
         'title' => 'Link to Google'
     ];
 
-    // Echo the adfly url.
+    // this will for example echo http://adf.ly/1KMh2Z.
     echo Adfly::create("http://www.google.com/", $options);
 });
 ```
