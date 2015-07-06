@@ -80,22 +80,32 @@ class Adfly {
      */
     public function __construct()
     {
+        // Initialize the options array.
         $this->initOptions();
+
+        // Check key and uid.
+        $this->configCheck();
     }
 
     /**
      * @param       $url
      * @param array $options
+     *
+     * @return string
      */
     public function create($url, $options = array())
     {
+        // URL
+        $this->setUrl($url);
+
         // Options.
-        $options = array_merge($options, ['url' => $url]);
+        $options = array_merge($options, ['url' => $this->getUrl()]);
 
         // Push options.
         $this->mergeOptions($options);
 
-        dd($this->getAdflyUrl());
+        // Return the Adfly url.
+        return $this->getAdflyUrl();
     }
 
     /**
@@ -108,6 +118,25 @@ class Adfly {
 
         // Push the config options to the options array.
         $this->setOptions($config_options);
+    }
+
+
+    /**
+     * @throws \Exception
+     */
+    private function configCheck()
+    {
+        $options = $this->getOptions();
+
+        if(!isset($options['key']) || empty($options['key']))
+        {
+            throw new \Exception("The 'key' option is required and can not be null.");
+        }
+
+        if(!isset($options['uid']) || empty($options['uid']))
+        {
+            throw new \Exception("The 'uid' option is required and can not be null.");
+        }
     }
 
     /**
@@ -126,10 +155,13 @@ class Adfly {
     }
 
     /**
+     * Get the shorten Adfly url.
+     *
      * @return string
      */
     private function getAdflyUrl()
     {
-       return file_get_contents($this->getApiUrl());
+        // Get the generated Adfly url.
+        return file_get_contents($this->getApiUrl());
     }
 }
