@@ -93,9 +93,9 @@ class Adfly {
      *
      * @return string
      */
-    public function create($url, $options = array())
+    public function create($url, $options = [])
     {
-        // URL
+        // URL.
         $this->setUrl($url);
 
         // Options.
@@ -122,6 +122,8 @@ class Adfly {
 
 
     /**
+     * Config check.
+     *
      * @throws \Exception
      */
     private function configCheck()
