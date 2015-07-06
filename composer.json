@@ -1,5 +1,14 @@
 {
     "name": "m44rt3np44uw/adfly",
+    "description": "An Adfly wrapper for Laravel 5",
+    "keywords": ["laravel", "adfly", "shortener"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Maarten Paauw",
+            "email": "maartenpaauw@gmail.com"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "M44rt3np44uw\\Adfly\\": "src/"
@@ -13,5 +22,6 @@
         "psr-4": {
             "M44rt3np44uw\\Adfly\\Tests\\": "tests/"
         }
-    }
+    },
+    "minimum-stability": "stable"
 }
