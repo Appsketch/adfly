@@ -1,5 +1,7 @@
 # Laravel Adfly
 
+[![Latest Stable Version](https://poser.pugx.org/m44rt3np44uw/adfly/v/stable)](https://packagist.org/packages/m44rt3np44uw/adfly) [![Total Downloads](https://poser.pugx.org/m44rt3np44uw/adfly/downloads)](https://packagist.org/packages/m44rt3np44uw/adfly) [![Latest Unstable Version](https://poser.pugx.org/m44rt3np44uw/adfly/v/unstable)](https://packagist.org/packages/m44rt3np44uw/adfly) [![License](https://poser.pugx.org/m44rt3np44uw/adfly/license)](https://packagist.org/packages/m44rt3np44uw/adfly)
+
 ## Installation
 
 First, pull in the package through Composer.
