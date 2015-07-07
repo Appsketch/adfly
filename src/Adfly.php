@@ -128,15 +128,20 @@ class Adfly {
      */
     private function configCheck()
     {
+        // Get the options.
         $options = $this->getOptions();
 
+        // Check if the key isset and not empty.
         if(!isset($options['key']) || empty($options['key']))
         {
+            // If the key is empty throw an error.
             throw new \Exception("The 'key' option is required and can not be null.");
         }
 
+        // Check if the uid isset and not empty.
         if(!isset($options['uid']) || empty($options['uid']))
         {
+            // If the uid is empty throw an error.
             throw new \Exception("The 'uid' option is required and can not be null.");
         }
     }
@@ -146,10 +151,10 @@ class Adfly {
      */
     private function getApiUrl()
     {
-        // Query string
+        // Query string.
         $query_string = http_build_query($this->getOptions());
 
-        // API url
+        // API url.
         $api_url = Adfly::BASE_URL . '?' . $query_string;
 
         // Return api url.
