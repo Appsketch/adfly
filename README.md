@@ -18,13 +18,6 @@ And then, if using Laravel 5.1, include the service provider within `app/config/
 ]
 ```
 
-And, for convenience, add a facade alias to this smae file at the bottom:
-```php
-'aliases' => [
-    'Adfly' => Appsketch\Adfly\Facades\Adfly::class,
-];
-```
-
 if using Laravel 5. include this service provider.
 
 ```php
@@ -33,12 +26,7 @@ if using Laravel 5. include this service provider.
 ]
 ```
 
-And this alias.
-```php
-'aliases' => [
-    'Adfly' => "Appsketch\Adfly\Facades\Adfly",
-];
-```
+The alias will automatically set.
 
 Publish the config file to the config folder with the following command.
 `php artisan vendor:publish`.
