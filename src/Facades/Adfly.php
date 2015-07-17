@@ -1,6 +1,6 @@
 <?php
 
-namespace M44rt3np44uw\Adfly\Facades;
+namespace Appsketch\Adfly\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -16,7 +16,7 @@ class Adfly extends Facade {
      */
     protected static function getFacadeAccessor()
     {
-        return 'adfly';
+        return 'Appsketch\Adfly\Adfly';
     }
 
 }

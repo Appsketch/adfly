@@ -6,7 +6,7 @@
  * Time: 18:01
  */
 
-namespace M44rt3np44uw\Adfly;
+namespace Appsketch\Adfly;
 
 use Illuminate\Support\Facades\Config;
 

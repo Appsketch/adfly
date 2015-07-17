@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "M44rt3np44uw\\Adfly\\": "src/"
+            "Appsketch\\Adfly\\": "src/"
         }
     },
     "require-dev": {
@@ -20,7 +20,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "M44rt3np44uw\\Adfly\\Tests\\": "tests/"
+            "Appsketch\\Adfly\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "stable"

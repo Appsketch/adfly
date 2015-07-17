@@ -1,29 +1,27 @@
 # Laravel Adfly
 
-[![Latest Stable Version](https://poser.pugx.org/m44rt3np44uw/adfly/v/stable)](https://packagist.org/packages/m44rt3np44uw/adfly) [![Total Downloads](https://poser.pugx.org/m44rt3np44uw/adfly/downloads)](https://packagist.org/packages/m44rt3np44uw/adfly) [![Latest Unstable Version](https://poser.pugx.org/m44rt3np44uw/adfly/v/unstable)](https://packagist.org/packages/m44rt3np44uw/adfly) [![License](https://poser.pugx.org/m44rt3np44uw/adfly/license)](https://packagist.org/packages/m44rt3np44uw/adfly)
+[![Latest Stable Version](https://poser.pugx.org/appsketch/adfly/v/stable)](https://packagist.org/packages/appsketch/adfly) [![Total Downloads](https://poser.pugx.org/appsketch/adfly/downloads)](https://packagist.org/packages/appsketch/adfly) [![Latest Unstable Version](https://poser.pugx.org/appsketch/adfly/v/unstable)](https://packagist.org/packages/appsketch/adfly) [![License](https://poser.pugx.org/appsketch/adfly/license)](https://packagist.org/packages/appsketch/adfly)
 
 ## Installation
 
 First, pull in the package through Composer.
 
 ```js
-"require": {
-    "m44rt3np44uw/adfly": "dev-master"
-}
+composer require appsketch/adfly
 ```
 
 And then, if using Laravel 5.1, include the service provider within `app/config/app.php`.
 
 ```php
 'providers' => [
-    M44rt3np44uw\Adfly\Providers\AdflyServiceProvider::class,
+    Appsketch\Adfly\Providers\AdflyServiceProvider::class,
 ]
 ```
 
 And, for convenience, add a facade alias to this smae file at the bottom:
 ```php
 'aliases' => [
-    'Adfly' => M44rt3np44uw\Adfly\Facades\Adfly::class,
+    'Adfly' => Appsketch\Adfly\Facades\Adfly::class,
 ];
 ```
 
@@ -31,14 +29,14 @@ if using Laravel 5. include this service provider.
 
 ```php
 'providers' => [
-    "M44rt3np44uw\Adfly\Providers\AdflyServiceProvider",
+    "Appsketch\Adfly\Providers\AdflyServiceProvider",
 ]
 ```
 
 And this alias.
 ```php
 'aliases' => [
-    'Adfly' => "M44rt3np44uw\Adfly\Facades\Adfly",
+    'Adfly' => "Appsketch\Adfly\Facades\Adfly",
 ];
 ```
 

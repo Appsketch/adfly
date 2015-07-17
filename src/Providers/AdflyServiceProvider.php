@@ -1,10 +1,10 @@
 <?php
 
-namespace M44rt3np44uw\Adfly\Providers;
+namespace Appsketch\Adfly\Providers;
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
-use M44rt3np44uw\Adfly\Adfly;
+use Appsketch\Adfly\Adfly;
 
 /**
  * Class AdflyServiceProvider
@@ -50,7 +50,7 @@ class AdflyServiceProvider extends ServiceProvider
      */
     private function registerAdfly()
     {
-        $this->app->bind('adfly', function()
+        $this->app->bind('Appsketch\Adfly\Adfly', function()
         {
             return new Adfly();
         });
