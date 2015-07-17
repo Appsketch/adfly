@@ -2,6 +2,7 @@
 
 namespace Appsketch\Adfly\Providers;
 
+use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
 use Appsketch\Adfly\Adfly;
@@ -28,7 +29,7 @@ class AdflyServiceProvider extends ServiceProvider
     public function boot()
     {
         // Publish config
-        $this->_publishConfig();
+        $this->publishConfig();
     }
 
     /**
@@ -38,11 +39,14 @@ class AdflyServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        // Merge config.
+        $this->mergeConfig();
+
         // Register Adlfy.
         $this->registerAdfly();
 
-        // Merge config.
-        $this->_mergeConfig();
+        // Alias Adfly.
+        $this->aliasAdfly();
     }
 
     /**
@@ -59,7 +63,7 @@ class AdflyServiceProvider extends ServiceProvider
     /**
      * Publish config.
      */
-    private function _publishConfig()
+    private function publishConfig()
     {
         $this->publishes([
             __DIR__ . '/../config/adfly.php' => config_path('adfly.php')
@@ -69,10 +73,48 @@ class AdflyServiceProvider extends ServiceProvider
     /**
      * Merge config.
      */
-    private function _mergeConfig()
+    private function mergeConfig()
     {
         $this->mergeConfigFrom(
             __DIR__ . '/../config/adfly.php', 'adfly'
         );
+    }
+
+    /**
+     * Alias Adfly.
+     */
+    private function aliasAdfly()
+    {
+        if(!$this->aliasExists('Adfly'))
+        {
+            AliasLoader::getInstance()->alias(
+                'Adfly',
+                \Appsketch\Adfly\Facades\Adfly::class
+            );
+        }
+    }
+
+    /**
+     * Check if an alias already exists in the IOC.
+     *
+     * @param $alias
+     *
+     * @return bool
+     */
+    private function aliasExists($alias)
+    {
+        return array_key_exists($alias, AliasLoader::getInstance()->getAliases());
+    }
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return [
+            'Appsketch\Adfly\Adfly'
+        ];
     }
 }
