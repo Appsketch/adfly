@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: maartenpaauw
- * Date: 06-07-15
- * Time: 18:01
- */
 
 namespace Appsketch\Adfly;
 
@@ -13,7 +7,7 @@ use Illuminate\Support\Facades\Config;
 /**
  * Class Adfly
  *
- * @package M44rt3np44uw\Adfly
+ * @package Appsketch\Adfly
  */
 class Adfly {
 

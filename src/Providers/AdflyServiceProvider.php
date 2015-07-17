@@ -10,7 +10,7 @@ use Appsketch\Adfly\Adfly;
 /**
  * Class AdflyServiceProvider
  *
- * @package M44rt3np44uw\Adfly\Providers
+ * @package Appsketch\Adfly\Providers
  */
 class AdflyServiceProvider extends ServiceProvider
 {

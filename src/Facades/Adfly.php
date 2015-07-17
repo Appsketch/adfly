@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Facade;
 /**
  * Class Adfly
  *
- * @package M44rt3np44uw\Adfly\Facades
+ * @package Appsketch\Adfly\Facades
  */
 class Adfly extends Facade {
 
